@@ -1,0 +1,248 @@
+body,div,p,h1,h2,h3,h4,h5,h6,ul,li,a,ol,span,i,em,img{margin:0;padding:0; list-style:none;}
+body,div,dl,dt,dd,pre,form,fieldset,input,p,blockquote,a,li,p{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+table th,table td{text-align:center;}
+button{outline: none!important;}
+thead th {background-color: #4e5a6c;color: white;}
+thead th {background-color: #9ab0d1;color: white;}
+thead th {background-color: #f9f9f9;color: #666;}
+.sortable td {cursor: pointer;}
+label {color: #666; font-weight: 500;}
+img{
+	border: none;
+}
+.header{
+	background: url(../img/1.png) repeat-x;
+	height: 62px;
+	position: relative;
+}
+.header h3{
+	line-height: 60px;
+	margin-left: 10px;
+	padding-left: 1%;
+	float: left;
+}
+.header .currentUser{
+	float: right;
+	line-height: 60px;
+	/*width: 100px;*/
+	height: 60px;	
+	margin-right: 1%;
+}
+.header .help-block{
+	float: right;
+	line-height: 47px;
+	width: 50px;
+	height: 47px;
+}
+.currentUserInfo{
+	position:relative;
+}
+.currentUserInfo a{
+	color: #ccc;
+}
+.currentUserInfo a:hover{
+	text-decoration: none;
+}
+.userInfo{
+	left: -50px !important;
+	top:60px !important;
+}
+.userInfo li a span{
+	font-size: 15px !important;
+}
+.header .currentUser span{
+	font-size: 14px;
+}
+.header .help-block span{
+ 	font-size: 14px;
+ 	padding-top: 16px;
+ 	color: #CCCCCC;
+}
+.header .currentUser span:nth-child(1){
+	margin-right: 10px;
+}
+.contentWrap{
+	width: 100%;
+	overflow: hidden;
+}
+.leftPanel{
+	width: 230px;
+	background: url(../img/2.png) repeat-x;
+	padding-top: 30px;
+	height: 798px;
+	position: absolute;
+	left: 0;
+	top: 62px;
+}
+.leftPanel ul{
+	width: 85%;
+	margin: 0 auto;
+}
+.leftPanel ul li{
+	margin-bottom: 10px;
+}
+.leftPanel ul li a{
+	color: #fff;
+}
+.leftPanel ul li a span{
+	margin-right: 8px;
+}
+.leftPanel ul li.homeActive a{
+	background: #fff;
+	color: #101010;
+	border-radius: 8px;
+	display: block;
+}
+.leftPanel ul li:hover a{
+	background: none;
+	color: #95d185;
+}
+.leftPanel ul li:hover ul li a{
+	color: #fff;
+}
+.leftPanel ul li ul li a:hover{
+	background: none;
+	color: #95d185;
+}
+.leftPanel ul li.homeActive:hover a{
+	background: #FFFFFF;
+	color: #101010;
+	border-radius: 8px;
+}
+.rightPanel{
+	height: 798px;
+	background: #EEEEEE;
+	margin-left: 230px;
+	overflow:auto;
+}
+.homeActive a{
+	color: #000;
+}
+.children{
+	margin-top: 10px!important;
+}
+.children li a{
+	padding-left: 25px;
+	text-decoration: none;
+}
+/********modal-body********/
+.modal-body p{
+	margin-left: 20%;
+}
+.modal-body p label{
+	width: 100px;
+	text-align: right;
+}
+.modal-body p input[type=text]{
+	width: 200px;
+}
+/*******Others Page********/
+.operation{
+	margin: 1% 2%;
+}
+.panel{
+	margin-bottom: 0px!important;
+}
+.selecter{
+	/*padding: 5px;*/
+}
+.search{
+	padding: 0px 12px;
+	height: 25px;
+}
+.form-group label{
+	padding-top: 2px!important;
+}
+#toolbar{
+	width: 110%;
+}
+#toolbar button{
+	border-radius: 16px;
+	line-height: 15px ;
+    border: none;
+    height: 30px;
+    width: 90px;
+    margin-right: 2%;
+}
+.btn-default span{
+	font-size: 8px;
+	margin-right: 6px;
+	line-height: 15px;
+}
+.btn-primary{
+	background:#61619D!important;
+	border-color:#61619D!important;
+}
+.pagination-detail{
+	margin-left: 20px;
+}
+.pagination > .active > a{
+	background:#61619D!important;
+	border-color: #61619D!important;
+	color:#FFFFFF!important;
+}
+.pagination > li > a{
+	color:#61619D!important;
+}
+.col-sm-1{
+	/*padding-left: 0!important;*/
+}
+.dropdown-menu{
+	min-width: 202px!important;
+}
+.row{
+	padding: 2px 15px;
+}
+.form-control{
+	height: 25px!important;
+	padding: 0px 12px!important;
+}
+.panel-heading{
+	padding:0px 15px!important;
+}
+.show-option{
+	height: 20px;
+	text-align: center;
+}
+.show-label{
+	border: 1px solid #BBBBBB;
+	border-top: none;
+	margin-bottom: 0px!important;
+	/*border-radius: 5px;*/
+}
+.show-label label{
+	width: 80px;
+	line-height: 20px;
+	margin-bottom: 0px!important;
+}
+.show-label span{
+	margin-right: 5px;
+}
+.nav-parent ul li{
+	padding: 0px 14px;
+}
+.user{
+	margin-right: 4px;
+	font-size: 17px !important;
+}
+.currentUserInfo{
+	height: 62px;
+}
+.breadcrumb {
+	background:#EEEEEE!important;
+	margin-bottom: 5px !important;
+}
+.breadcrumb span{
+	margin-right: 10px;
+}
+.form-group{
+	margin-bottom: 0px!important;
+}
+/**other model-body**/
+.password-modal p label{
+	width:156px!important;
+	margin-right: 5px!important;
+}
+.password-modal p label i{
+	color: #ff0000;
+}

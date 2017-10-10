@@ -1,0 +1,82 @@
+<div class="ng-Event">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li class="active">Event</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading">Select Option</div>
+   			<div class="show-option">
+   				<label class="show-label">
+   					<label>hide-option</label>
+   					<span class="glyphicon glyphicon-chevron-up"></span>
+   				</label>
+   			</div>
+   			<div class="panel-body container-fluid selecter">
+    			<form id="formSearch" class="form-horizontal">
+     				<div class="form-group">
+     					<div class="row">
+	      					<label class="control-label col-sm-1" for="txt_search_eventId">Event ID</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control eventId" id="txt_search_eventId">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_destinationTopic">Destination Topic</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control destinationTopic" id="txt_search_destinationTopic">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_epgId">EPG ID</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control epgId" id="txt_search_epgId">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_sourceIdd">Source ID</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control sourceIdd" id="txt_search_sourceIdd">
+	      					</div>
+      						<label class="control-label col-sm-1" for="txt_search_serilNo">Seril No</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control serilNo" id="txt_search_serilNo">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_opName">OperationId</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control operationId" id="txt_search_operationId">
+	      					</div>
+      					</div>
+      					<div class="row">
+	      					<label class="control-label col-sm-1" for="txt_search_executionId">Execution ID</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control executionId" id="txt_search_executionId">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_sourceTopic">Source Topic</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control sourceTopic" id="txt_search_sourceTopic">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_destinationId">Destination ID</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control destinationId" id="txt_search_destinationId">
+	      					</div>
+	      					<!--<label class="control-label col-sm-1" for="txt_search_payLoad">PayLoad</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control payLoad" id="txt_search_payLoad">
+	      					</div>-->
+	      					<label class="control-label col-sm-1" for="d4311">StartTime</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control startTime Wdate" id="d4311"  onclick="WdatePicker({maxDate:'#F{$dp.$D(\'d4312\')||CurentTime()}',dateFmt: 'yyyy-MM-dd HH:mm:ss',lang:'en'})"/>
+	      					</div>
+	      					<label class="control-label col-sm-1" for="d4312">EndTime</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control endTime Wdate" id="d4312"   onclick="WdatePicker({minDate:'#F{$dp.$D(\'d4311\')}',maxDate:CurentTime(),dateFmt: 'yyyy-MM-dd HH:mm:ss',lang:'en'})"/>
+	      					</div>
+      					</div>
+      					<div class="row">	      					
+	      					<div class="col-sm-12" style="text-align:right;">
+	       						<button type="button" id="btn_query" class="btn btn-primary search">Search</button>
+	      					</div>
+      					</div>
+     				</div>
+    			</form>
+   			</div>
+  		</div>
+  		<table id="tb_table"></table>
+ 	</div>
+</div>
+<script type="text/javascript" src="../../Event/js/Event.js"></script>

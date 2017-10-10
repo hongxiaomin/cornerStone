@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css" href="../../A&A/css/resource.css"/>
+<div class="ng-res">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li>A&A</li>
+			<li class="active">Resource</li>
+		</ol>
+	</div>
+	<div class="panel-body userTable" style="padding-bottom:0px;">
+		<div class="panel panel-default">
+			<div class="panel-heading">Select Option</div>
+			<div class="show-option">
+				<label for="" class="show-label">
+					<label for="">hide-option</label>
+					<span class="glyphicon glyphicon-chevron-up"></span>
+				</label>
+			</div>
+			<div class="panel-body selecter">
+				<form id="formSearch" class="form-horizontal">
+					<div class="form-group">
+						<div class="row">
+							<label class="control-label col-sm-1" for="txt_search_id">ID</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_id">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_name">Name</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_name">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_type">Type</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_type">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_url">Url</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_url">
+							</div>
+						</div>
+						<div class="row">
+							<label class="control-label col-sm-1" for="txt_search_pn">Parent Name</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_pn">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_psn">Parents Name</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_psn">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_isenable">isEnable</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_isenable">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_permission">Permission</label>
+							<div class="col-sm-1">
+								<input type="text" class="form-control " id="txt_search_permission">
+							</div>
+							<div class="col-sm-2" style="text-align: right;">
+								<button type="button" id="btn_query" class="btn btn-primary search" style="padding:0px 12px;">Search</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+  		<table id="tb_table"></table>
+  		
+	</div>
+</div>
+<script src="../../A&A/js/resource.js" type="text/javascript" charset="utf-8"></script>

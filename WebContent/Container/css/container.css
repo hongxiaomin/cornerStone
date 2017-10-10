@@ -1,0 +1,26 @@
+#container_tb_table tbody tr,#eventTable tbody tr{
+	cursor: pointer;
+}
+.EventContent{
+	border: 1px solid #C0C0C0;
+	padding: 10px 20px;
+	padding-right: 50px !important;
+	width: 400px;
+	height: 240px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+.EventContent div{
+	padding-right: 20px;
+}
+.EventContent label{
+	text-align: right;
+	margin-right: 10px;
+}
+.EventContent span{
+	width: 200px;
+	text-align: left;
+}
+#exceptionTable tbody tr td .msg{
+	text-align: left;
+}

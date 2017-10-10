@@ -1,0 +1,102 @@
+<link rel="stylesheet" type="text/css" href="../../Container/css/container.css"/>
+<div class="ng-container">
+	<div class="panel-body" style="padding-bottom:0px;" id="container_list">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li class="active">Container</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading">Select Option</div>
+   			<div class="show-option">
+   				<label class="show-label">
+   					<label>hide-option</label>
+   					<span class="glyphicon glyphicon-chevron-up"></span>
+   				</label>
+   			</div>
+   			<div class="panel-body selecter">
+    			<form id="formSearch" class="form-horizontal">
+     				<div class="form-group">
+      					<label class="control-label col-md-2 " for="txt_search_id">Container ID</label>
+      					<div class="col-md-2">
+       						<input type="text" class="form-control id" id="txt_search_id">
+      					</div>
+      					<label class="control-label col-md-2" for="txt_search_name">Name</label>
+      					<div class="col-md-2">
+       						<input type="text" class="form-control name" id="txt_search_name">
+      					</div>
+     				</div>
+     				<div class="form-group" style="margin-top: 10px;">
+     					<label class="control-label col-md-2" for="txt_search_status">Status</label>
+      					<div class="col-md-2">
+       						<select name="txt_search_status" id="txt_search_status" class="form-control" >
+       							<option value="-2" >== Please&nbsp;&nbsp;select ==</option>
+       							<option value="1">REGISTERING</option>
+       							<option value="2">STARTING</option>
+       							<option value="3">HA_PENDING</option>
+       							<option value="4">NORMAL</option>
+       							<option value="-1">ERROR</option>
+       							<option value="0">ABNORMAL</option>
+       						</select>
+      					</div>
+      					<label class="control-label col-md-2" for="txt_search_node">Node</label>
+      					<div class="col-md-2">
+       						<input type="text" class="form-control node" id="txt_search_node">
+      					</div>
+      					<div class="col-md-2">
+       						<button type="button" style="margin-left:50px" id="btn_query_container" class="btn btn-primary search">Search</button>
+      					</div>
+     				</div>
+    			</form>
+   			</div>
+  		</div>
+  		<table id="container_tb_table"></table>
+ 	</div>
+ 	
+ 	<div class="panel-body hide" style="padding-bottom:0px;" id="detail">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li><a href="javaScript:;" class="container_list">Container</a></li>
+			<li><a href="javaScript:;" class="container_list">List</a></li>
+			<li class="active">Container Detail</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-body">
+   				<div class="row">
+   					<div class="col-md-6 text-left">
+   						<p style="font-size: 16px;">Status</p>
+   						<p style="font-size: 24px; line-height: 40px;" class="container_status">Running</p>
+   					</div>
+   					<div class="col-md-6 text-right">
+   						<p class="container_id">container1001</p>
+   						<p class="container_name">Name1</p>
+   						<p class="container_node">172.22.34.188</p>
+   					</div>
+   				</div>
+   			</div>
+  		</div>
+  		
+  		<div class="panel panel-default" style="margin-top: 30px;">
+  			<div class="panel-body">
+  				<ul class="nav nav-tabs" role="tablist">
+				 	<li role="presentation" class="active"><a href="#meu" aria-controls="meu" role="tab" data-toggle="tab">MEU List</a></li>
+    				<li role="presentation"><a href="#event" aria-controls="running" role="tab" data-toggle="tab">Event</a></li>
+					<li role="presentation"><a href="#exception" aria-controls="log" role="tab" data-toggle="tab">Exception</a></li>
+  				</ul>
+  				<div class="tab-content" style="min-height: 450px;">
+				    <div role="tabpanel" class="tab-pane active" id="meu">
+				    	<table id="meuTable"></table>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="event">
+				    	<table id="eventTable"></table>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="exception">
+				    	<table id="exceptionTable"></table>
+				    </div>
+			  	</div>
+  		
+  			</div>
+  			
+  		</div>
+ 	</div>
+</div>
+<script type="text/javascript" src="../../Container/js/Container.js"></script>

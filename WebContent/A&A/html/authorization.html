@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="../../A&A/css/authorization.css"/>
+<div class="ng-auth">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li>Permission</li>
+		</ol>
+	</div>
+	<div class="panel-body auth_box">
+		<div class="inputItem">
+			<label for="">User Name:</label>
+			<div class="input-box">
+				<input type="text" readonly="readonly" name="username"/>
+				<span class="glyphicon glyphicon-triangle-bottom userIcon"></span>
+				<ul class="input-list" id="userlist">
+					<li>root1</li>
+					<li>root2</li>
+					<li>root3</li>
+					<li>root4</li>
+				</ul>
+			</div>
+			<span>*</span>
+			<p class="text-danger userInfo hide">Please select a user</p>
+		</div>
+		
+		<div class="setBtn">
+			<label for="">Permission:</label>
+			<div class="permission-box">
+				<div class="permission-content">
+					<ul id="treeNav" class="ztree"></ul>
+				</div>
+				<div class="btn-box">
+					<button class="btn btn-primary" id="permissionSure">Save</button>
+				</div>
+			</div>
+			<div class="permission-box-right" id="opertionDiv" style="display: none;">
+				<div class="permission-content permission-check" id="opertionContent">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="loadingbg">
+	<div class="loading"></div>
+</div>
+<script src="../../A&A/js/authorization.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,289 @@
+.nav_bar_cloud{
+	padding: 8px 15px;
+	background: #eee;;
+	margin-bottom: 5px;
+}
+.nav_bar_cloud label span{
+	margin-right: 10px;
+}
+.nav_cloud{
+	display: inline-block;
+	margin-left: 10px;
+}
+.nav_cloud a{
+	display: inline-block;
+    color: #666;
+    padding: 0 30px;
+    border-right: 1px solid #333;
+    line-height: 16px;
+    height: 16px;
+}
+.nav_cloud a:last-child{
+	border: none;
+}
+.nav_cloud a:hover{
+	color:#337ab7;
+	text-decoration: none;
+}
+.nav_cloud a.active{
+	color:#337ab7;
+	text-decoration: none;
+}
+.nav_search{
+	display: inline-block;
+	background: #fff;
+    width: 280px;
+    border: 1px solid #ccc;
+    height: 30px;
+    position: relative;
+    border-radius: 3px;
+}
+.nav_search span{
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}
+
+.nav_search input{
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding-left: 30px;
+}
+.meu_box{
+	width: 100%;
+    margin-top: 60px;
+    padding: 20px;
+    padding-left: 0;
+    height: 580px;
+    overflow: auto;
+}
+.meu_item{
+	cursor: pointer;
+    width: 300px;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    height: 160px;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.meu_item:hover{
+	 box-shadow: 0 0 3px #ccc;
+}
+.meu_item h4{
+	font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.meu_item p{
+	font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.meu_item .meu_bot{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 20px;
+}
+.meu_price{
+	margin-left: 15px;
+    color: #ff7b17;
+    font-weight: bold;
+    font-size: 14px;
+}
+.meu_price em{
+	font-style: normal;
+}
+.meu_price_btn{
+	margin-right: 30px;
+}
+.meu_price_btn .btn{
+	padding: 3px 12px;
+}
+/*meuDetail Modal*/
+#meuDetail .modal-dialog,#purchaseMeu .modal-dialog,#ExpiredMeu .modal-dialog,#meuXml .modal-dialog,#RenewDetail .modal-dialog{
+	width: 80%!important;
+}
+.meu_section{
+	display: inline-block;
+	width: 45%;
+	border: 2px solid #ddd;
+	height: 450px;
+	box-sizing: border-box;
+	vertical-align: top;
+	padding: 20px;
+	position: relative;
+}
+.meu_section:last-child{
+	margin-left: -3px;
+}
+.meu_section em{
+	font-style: normal;
+}
+.meu_modal-body{
+	text-align: center;
+}
+.meu_modal-body h4{
+	text-align: left;
+}
+.detail_box{
+	/*padding: 30px 10px 10px;*/
+	margin-top: 40px;
+}
+
+.detail_box p,.detail_box section{
+	margin: 20px 10px 0;
+	text-align: left;
+}
+
+.detail_box p label,.detail_box section label{
+	width: 120px;
+	font-weight: bold;
+    margin-right: 5px;
+    text-align: right;
+    vertical-align: top;
+}
+.detail_box article{
+    text-align: left;
+    text-indent: 2em;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+
+.meu_description_detail p {
+	text-indent: 2em;
+    margin: 20px 0 0;
+}
+.detail_box input{
+	display: inline-block;
+	width: 200px;
+	padding-left:10px ;
+}
+.use_time{
+	display: inline-block;
+	width: 200px;
+	border:1px solid #9D9D9D ;
+	background: #fff;
+	height: 28px;
+}
+.use_time>input{
+	width: 65%;
+	border: none;
+	background: none;
+	outline: none;
+	height: 100%;
+	padding-left: 10px;
+}
+.select_num_box{
+	width: 35%;
+    position: relative;
+    border-left: 1px solid #d0d0d0;
+    padding-right: 5px;
+    height: 100%;
+    cursor: pointer;
+}
+.select_num_box input{
+	width: 75%;
+    border: none;
+    padding: 0;
+    text-align: right;
+    height: 100%;
+}
+.select_num_box ul{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    top: 26px;
+    left: 0;
+    margin-left: -1px;
+    margin-right: -1px;
+    border: 1px solid #9d9d9d;
+    display: none;
+    z-index: 200;
+    background: #fff;
+}
+.select_num_box ul li{
+	padding:2px 10px;
+	cursor: pointer;
+}
+.select_num_box ul li:hover{
+	background: #D0D0D0;
+}
+.meu_modal_btn{
+	position: absolute;
+	left: 0;
+	bottom: 30px;
+	padding: 0 20px;
+	text-align: center;
+	width: 100%;
+}
+.meu_modal_btn .btn{
+	padding: 3px 12px;
+}
+.meu_modal_btn .btn:first-child{
+	margin-right: 80px;
+}
+.purchase_box{
+	padding-top: 15px;
+}
+.renew_body{
+	width: 90%;
+	margin: 0 auto;
+}
+.renew_body p{
+	margin-left: 0;
+}
+#ExpiredMeu .modal-footer{
+	text-align: center;
+}
+#ExpiredMeu .modal-footer .btn{
+	padding: 3px 12px;
+}
+#ExpiredMeu .modal-footer .btn:first-child{
+	margin-right: 20px;
+}
+.btn-success{
+	background: #0c7503!important;
+    border-color: #0c7503!important;
+}
+.instance_num{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #61619D;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	text-align: center;
+	line-height: 30px;
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+.instance_num:hover{
+	color: #fff;
+	text-decoration: none;
+}
+#meuXml{
+	word-break: break-word;
+}
+.xmlContent{
+	width: 100%;
+	height: 600px;
+	padding: 20px;
+}
+.table>tbody>tr>td{
+	vertical-align: middle!important;
+}

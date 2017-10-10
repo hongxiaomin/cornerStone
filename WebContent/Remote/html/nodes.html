@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="../../Remote/css/nodes.css">
+<div class="ng-environment">
+	<!--loading bg-->
+	<div id="loadingbg">
+		<div class="loading"></div>
+	</div>
+	<div class="panel-body nodes" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li class="active">Environment</li>
+			<li class="active">Nodes</li>
+		</ol>
+		<div class="panel panel-default">
+			<div class="panel-heading">Select Option</div>
+			<div class="show-option">
+				<label class="show-label">
+   					<label>hide-option</label>
+				<span class="glyphicon glyphicon-chevron-up"></span>
+				</label>
+			</div>
+			<div class="panel-body container-fluid selecter">
+				<form id="formSearch" class="form-horizontal">
+					<div class="form-group">
+						<div class="row">
+							<label class="control-label col-md-2" for="txt_search_id">Node ID</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control " id="txt_search_id">
+							</div>
+							<label class="control-label col-md-2" for="txt_search_hostname">HostName</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control " id="txt_search_hostname">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<label class="control-label col-md-2" for="txt_search_ip">IP</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control " id="txt_search_ip">
+							</div>
+							<label class="control-label col-md-2" for="txt_search_status">Status</label>
+							<div class="col-md-2">
+								<select name="" class="form-control " id="txt_search_status">
+									<option value="">select status...</option>
+									<option value="available">available</option>
+									<option value="unavailable">unavailable</option>
+								</select>
+							</div>
+							<div class="col-md-2" style="text-align: right;">
+								<button type="button" id="btn_query" class="btn btn-primary search" style="padding:0px 12px;">Search</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="toolbar" class="btn-group">
+			<button id="btn_new" type="button" class="btn btn-default new">
+    			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>New
+   			</button>
+		</div>
+		<table id="tb_table" class="nodeTable"></table>
+	</div>
+	<div class="newnode">
+		<div class="breaddiv" style="padding-top: 1%; padding-left: 15px;">
+			<ol class="breadcrumb">
+				<span class="glyphicon glyphicon-hand-right"></span>
+				<li>
+					<a href="#" id="environment-lists">Environment</a>
+				</li>
+				<li>
+					<a href="#" class="cut" id="nodes">Nodes</a>
+				</li>
+				<li class="active">Add Node</li>
+			</ol>
+		</div>
+		<p class="tip"><span class="glyphicon glyphicon-list-alt"></span>Add Node</p>
+		<div class="newinput">
+			<p>
+				<label>IP</label>
+				<input type="text" class="ip">
+				<span class="color-red">*</span>
+				<span class="newinput-item"></span>
+			</p>
+			<p class="info-prompt ip-prompt">
+				<span class="color-red">
+					IP format is not correct
+				</span>
+			</p>
+			<p>
+				<label>UserName</label>
+				<input type="text" class="name">
+				<span class="color-red">*</span>
+				<span class="newinput-item"></span>
+			</p>
+			<p class="info-prompt username-prompt">
+				<span class="color-red">
+					Please enter UserName information
+				</span>
+			</p>
+			<p>
+				<label>PassWord</label>
+				<input type="password" class="password">
+				<span class="color-red">*</span>
+				<span class="glyphicon glyphicon-eye-open newinput-item" id="seePassword"></span>
+			</p>
+			<p class="info-prompt password-prompt">
+				<span class="color-red">
+					Please enter Password information
+				</span>
+			</p>
+			<p>
+				<button type="button" id="save" data-loading-text="Waiting..." class="btn btn-primary save">Save</button>
+				<button type="button" id="cancel" class="btn btn-primary cancel">Cancel</button>
+			</p>
+		</div>
+	</div>
+
+	<!--add node modal-->
+	<div class="modal fade" id="nodeModal" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title"><span class="glyphicon glyphicon-list-alt" style="margin-right: 10px;"></span>Detail Information</h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid modal-content-inner"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../Remote/js/nodes.js"></script>

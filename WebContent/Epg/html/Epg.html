@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="../../Epg/css/Epg.css" />
+<div class="ng-Epg">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li>EPG</li>
+			<li class="active">Lists</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading">Select Option</div>
+   			<div class="show-option">
+   				<label class="show-label">
+   					<label>hide-option</label>
+   					<span class="glyphicon glyphicon-chevron-up"></span>
+   				</label>
+   			</div>
+   			<div class="panel-body selecter">
+    			<form id="formSearch" class="form-horizontal">
+     				<div class="form-group">
+      					<label class="control-label col-sm-1" for="txt_search_epgid">EPG ID</label>
+      					<div class="col-sm-3">
+       						<input type="text" class="form-control id" id="txt_search_epgid">
+      					</div>
+      					<label class="control-label col-sm-1" for="txt_search_epgname">Name</label>
+      					<div class="col-sm-3">
+       						<input type="text" class="form-control name" id="txt_search_epgname">
+      					</div>
+      					<div class="col-sm-4" style="text-align:left;">
+       						<button type="button" style="margin-left:50px" id="btn_query" class="btn btn-primary search">Search</button>
+      					</div>
+     				</div>
+    			</form>
+   			</div>
+  		</div>  
+  		<div id="toolbar" class="btn-group"></div>
+  		<table id="tb_table" class="epgTable"></table>
+ 	</div>
+ 	<!--Add-->
+	<div class="modal fade" id="Add" tabindex="-1" role="dialog" aria-labelledby="Addlabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" id="Addlabel"><span class="glyphicon glyphicon-list-alt" style="margin-right: 6px;"></span>Add</h4>
+				</div>
+				<div class="modal-body">
+	 				<p>
+	     				<label>Id</label>
+	    				 <input type="text" name="id" >
+	 				</p>
+	 				<p>
+	     				<label>Name</label>
+	    				 <input type="text" name="name" >
+	 				</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default Close" data-dismiss="modal">Close</button>
+					<button class="btn btn-primary save">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Update-->
+	<div class="modal fade" id="Update" tabindex="-1" role="dialog" aria-labelledby="Updatelabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" id="Updatelabel"><span class="glyphicon glyphicon-refresh" style="margin-right: 6px;"></span>Update</h4>
+				</div>
+				<div class="modal-body">
+	 				<p>
+	     				<label>Id</label>
+	    				 <input type="text" >
+	 				</p>
+	 				<p>
+	     				<label>Name</label>
+	    				 <input type="text" >
+	 				</p>
+	 				<p>
+	     				<label>Epg Xml Path</label>
+	    				 <input type="text" >
+	 				</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">Close</button>
+					<button class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ng-EpgDetail" style="display: none;">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li>EPG</li>
+			<li class="active EPGLIST"><a href="javascript:void(0)">Lists</a></li>
+			<li class="active EPGDETAIL">EPG  Detail</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading"></div>
+   		</div>
+ 	</div><!--panel-body end-->
+ 	<div class="meuDetail">
+ 		<div class="operation" style="margin: 1% 0 1%;">
+  			<button type="button"  class="btn btn-primary figure" style="width: 80px;">Graph</button>
+ 			<button type="button"  class="btn btn-primary code buttonActive" style="width: 80px;">Source</button>
+ 		</div>
+ 		<textarea class="epgDetailCode" style="width:100%; border: solid 1px gray; height: 720px;display: none;" readonly="readonly"></textarea>
+ 		<div id="sample">
+		 	<div class="drawFlow">  
+		       <div id="myDiagram" style="border: solid 1px gray; height: 720px"></div>  
+		  	</div>
+		</div>
+ 	</div>
+</div>
+<script type="text/javascript" src="../../Epg/js/flowchart.js" ></script>
+<script type="text/javascript" src="../../Epg/js/Epg.js"></script>

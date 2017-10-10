@@ -1,0 +1,274 @@
+<link rel="stylesheet" href="../../lib/steps/jquery.steps.css" />
+<link rel="stylesheet" type="text/css" href="../../Cloud/css/app.css"/>
+<div class="ng-cloud-app">
+	
+	<div class="panel-body">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li class="cloudMeu" style="cursor: pointer;"><a href="javascript:;">Cloud</a></li>
+			<li class="active">App</li>
+		</ol>
+		<div class="appProgress" style="display: none;">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th width="30%">App ID</th>
+						<th>Progress</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div id="appTable">
+			<div id="toolbar" class="btn-group">
+				<button id="btn_create" type="button" class="btn btn-default">
+					Create
+				</button>
+				<button id="btn_update" type="button" class="btn btn-default disabled">
+					Update
+				</button>
+				<button id="btn_delete" type="button" class="btn btn-default disabled">
+					Remove
+				</button>
+			</div>
+			<table id="tb_table" class="appTable"></table>
+		</div>
+		
+		<!--create App-->
+		<div id="createApp" class="hidden">
+			<section class="app_step basic_info">
+				<h3 for="">
+					Basci Info
+				</h3>
+				<div class="app_step_right">
+					<p>
+						<label for="">Name:</label>
+						<input type="text" name="name" />
+						<span class="text-danger">*</span>
+						<span class="text-danger">( Enter a valid App Name )</span>
+					</p>
+					<p>
+						<label for="">Description:</label>
+						<input type="text" name="description" />
+					</p>
+				</div>
+			</section>
+			<section class="app_step epg_list">
+				<h3>
+					EPG List
+				</h3>
+				<div class="app_step_right epg_list_box">
+					<ul class="epg_list_content">
+						<li>
+							<input type="checkbox" id="1" />
+							<label for="1">eee</label>
+							
+						</li>
+					</ul>
+					<p class="text-danger">
+						* ( Choose at least one EPG )
+					</p>
+				</div>
+			</section>
+			<section class="app_step meu_configuration">
+				<h3 for="">
+					MEU Configuration
+				</h3>
+				<div class="app_step_right meu_configuration_box">
+					<ul id="configurationTree" class="ztree" ></ul>
+					<div class="configura_detail">
+						<!--<textarea class="configura_file hidden"></textarea>-->
+						<div class="configura_upload hidden">
+							<label class="btn-primary btn">Select Files...</label>
+							<input type="text" readonly="readonly" class="upload_text">
+							<!--<input type="file" class="upload_file"/>-->
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<form id="createAppForm" class="hidden" enctype="multipart/form-data">
+				<input type="text" name="appInfo" value=""/>
+			</form>
+			<div class="create_btn btn_tool">
+				<button class="btn btn-primary saveApp disabled">OK</button>
+				<button class="btn btn-default cancelApp">Cancel</button>
+			</div>
+		</div>
+	
+		<div id="deployApp" class="hidden">
+			<div id="wizard">
+				<h3>Configuration</h3>
+				<section class="Configure">
+					<p class="tip">The use of this page is to config the App informations.</p>
+					<div class="Configuration">
+						<div class="transfer-wrap row">
+							<div class="transfer-box col-md-5">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<div class="row">
+											<h3>MEU List</h3>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="meu-list">
+											<ul class="transfer-list" id="meuListAll">
+												<li><div><input type="checkbox"/><label >meuName</label></div></li>
+												<li><div><input type="checkbox"/><label >meuName</label></div></li>
+												<li><div><input type="checkbox"/><label >meuName</label></div></li>
+												<li><div><input type="checkbox"/><label >meuName</label></div></li>
+											</ul>
+										</div>
+										<p class="text-danger meu-info">
+											*All meu are added to the Container before entering the next step
+										</p>
+									</div>
+									<div class="panel-footer allcheck1">
+										<input type="checkbox" name="allcheck1" id="allcheck1" value="" />
+										<label for="allcheck1">
+											Select All
+										</label>
+									</div>
+									
+								</div>
+							</div>
+							
+							<div class="col-md-1">
+								<div class="transfer-operation">
+									<div class="right" disabled="true">
+										<span class="glyphicon glyphicon-menu-right"></span>
+									</div>
+									<div class="left">
+										<span class="glyphicon glyphicon-menu-left"></span>
+									</div>
+								</div>
+							</div>
+							<div class="transfer-box col-md-6">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<div class="row">
+											<div class="col-sm-9">
+												<span style="display: inline-block;width: 20%;">Container</span>
+												<div class="transfer-select">
+													<input type="text" readonly="readonly"  id="container"/>
+													<span class="glyphicon glyphicon-triangle-bottom"></span>
+													<ul class="container_list">
+														<li>Container One</li>
+														<li>Container Two</li>
+														<li>Container Three</li>
+													</ul>
+												</div>
+											</div>
+											<div class="control-container col-sm-3" style="padding: 0;">
+												<a  title="Add New Container" data-toggle="modal" data-target="#creatContainer" id="addContainer">
+													<span class="glyphicon glyphicon-plus-sign"></span>
+												</a>
+												<a title="Edit This Container" data-toggle="modal" data-target="#creatContainer" id="editContainer" class="edit">
+													<span class="glyphicon glyphicon-edit"></span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="meu-list" style="height: 340px;">
+											<ul class="transfer-list" id="MeuDetail">
+												
+											</ul>
+										</div>
+									</div> 
+									<div class="panel-footer allcheck2">
+										<input type="checkbox" name="allcheck2" id="allcheck2" value="" />
+										<label for="allcheck2">
+											Select All
+										</label>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</section>
+				<h3>Deploy</h3>
+				<section class="deploypage">
+					<div class="deploypageContent">
+						<p class="tip">The use of this page is to display information to the user and Deploy the Apps.</p>
+						<div class="containerTree">
+							<ul id="treeContainer" class="ztree"></ul>
+						</div>
+					</div>
+					<div class="totalpage">
+						<div class="panel-body" style="padding-bottom:0px;">
+							<table class="totaltable table">
+								<thead>
+									<tr>
+										<th width="30%">APP ID</th>
+										<th>Progress</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="tips">
+	<p>Add task success!</p>
+</div>
+
+<div id="loadingbg">
+	<div class="loading"></div>
+</div>
+
+<div class="modal fade" id="creatContainer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 750px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Container Specification</h4>
+			</div>
+			<div class="modal-body">
+				<div class="user-input">
+					<label for="">Name :</label>
+					<input type="text"  name="containerName" placeholder=""/>
+					<span class="text-danger">*</span>
+					<p class="text-danger hide" id="nameInfo">The name parameter must exist</p>
+				</div>
+				<div class="user-input">
+					<label for="">Retry Count :</label>
+					<input type="number" name="retryCount" value="5"/>
+					<p class="text-danger">Note:The retry count if MEU method execute failed</p>
+				</div>
+				<div class="user-input">
+					<label for="">Max Waiting Time(s) :</label>
+					<input type="number"  name="waitTime" value="30"/>
+					<p class="text-danger">Note:Container invoke MEU method max waiting time</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="saveContainer">OK</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="cancelContainer">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="errorLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 750px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">BuildLog</h4>
+			</div>
+			<div class="modal-body">
+				<article class="logContent"></article>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../../lib/jquery-form.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../lib/steps/jquery.steps.js"></script>
+<script type="text/javascript" src="../../Cloud/js/app.js"></script>

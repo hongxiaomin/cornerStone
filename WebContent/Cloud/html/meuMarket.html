@@ -1,0 +1,316 @@
+<link rel="stylesheet" type="text/css" href="../../Cloud/css/meuMarket.css"/>
+<div class="ng-cloud-meu">
+	<div class="panel-body">
+		<div class="nav_bar_cloud">
+			<label for=""><span class="glyphicon glyphicon-hand-right"></span>MEUS:</label>
+			<div class="nav_cloud">
+				<a href="javaScript:;" class="meuPurchased active">Purchased</a>
+				<a href="javaScript:;" class="meuExpired">Expired</a>
+				<a href="javaScript:;" class="meuAll">MEU Market</a>
+			</div>
+			<div class="nav_search">
+				<span class="glyphicon glyphicon-search"></span>
+				<input type="search" />
+			</div>
+		</div>
+		<div class="meu_box clearfix">
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+			<div class="meu_item">
+				<h4>meu_web</h4>
+				<p>This meu is using for ...</p>
+				<div class="meu_bot">
+					<span class="meu_price pull-left">
+						¥
+						<em>0.1</em>
+						Per Hour
+					</span>
+					<span class="pull-right meu_price_btn">
+						<button class="btn btn-primary purchase">Purchase</button>
+						<button class="btn btn-primary renew hidden">Renew</button>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--MEU Detail Modal-->
+<div class="modal fade" id="meuDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">MEU Detail</h4>
+			</div>
+			<div class="modal-body meu_modal-body">
+				<div class="meuSummary meu_section">
+					<h4>MEU Summary</h4>
+					<div class="meu_summary_detail detail_box">
+						<p>
+							<label for="">Name:</label>
+							<span data_name="name">meu_customer</span>
+						</p>
+						<p>
+							<label for="">Type:</label>
+							<span data_name="type">function</span>
+						</p>
+						<p>
+							<label for="">Language:</label>
+							<span data_name="language">Java</span>
+						</p>
+						<p>
+							<label for="">Author:</label>
+							<span data_name="author">DRC</span>
+						</p>
+						<p>
+							<label for="">Version:</label>
+							<span data_name="version">0.1</span>
+						</p>
+						<p>
+							<label for="">Create Date:</label>
+							<span data_name="createDate">2016-12-01 04:51:59</span>
+						</p>
+					</div>
+				</div>
+				<div class="meuDescription meu_section">
+					<h4>MEU Description</h4>
+					<div class="detail_box meu_description_detail">
+						<article>
+							The Meu is using for ...
+						</article>
+						<p data-toggle="modal"  data-target="#meuXml" id="linkXml">
+							<a href="javaScript:;" >
+								The xml file of the MEU in the link
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<!--Purchase MEu Modal-->
+<div class="modal fade" id="purchaseMeu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Purchase MEU</h4>
+			</div>
+			<div class="modal-body meu_modal-body">
+				<div class="meu_section">
+					<div class="detail_box purchase_box">
+						<p>
+							<label for="">Name:</label>
+							<span data_name="name">meu_customer</span>
+						</p>
+						<p>
+							<label for="">Instance Number:</label>
+							<input type="number" min="0" data_name="count"/>
+						</p>
+						<section>
+							<label for="">Usage Time:</label>
+							<div class="use_time">
+								<input type="number" min="0" data_name="time"/>
+								<div class="select_num_box pull-right">
+									<input type="text" readonly="readonly" value="Hours"/>
+									<span class="caret"></span>
+									<ul class="date_style">
+										<!--<li>Months</li>-->
+										<li>Days</li>
+										<li>Hours</li>
+										<li>Mins</li>
+										<li>Secs</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<div class="meu_modal_btn">
+							<button class="btn btn-primary purchaseOk">OK</button>
+							<button class="btn btn-default purchaseCancel">Cancel</button>
+						</div>
+					</div>
+				</div>
+				<div class="meu_section">
+					<h4>MEU Summary</h4>
+					<div class="detail_box">
+						<table class="table table-bordered table-striped">
+							<tbody>
+								<tr>
+									<td>name</td>
+									<td>meu_customer</td>
+								</tr>
+								<tr>
+									<td>type</td>
+									<td>function</td>
+								</tr>
+								<tr>
+									<td>lanaguage</td>
+									<td>Java</td>
+								</tr>
+								<tr>
+									<td>version</td>
+									<td>1.0</td>
+								</tr>
+								<tr>
+									<td>author</td>
+									<td>drc</td>
+								</tr>
+								<tr>
+									<td>description</td>
+									<td>This meu is using for</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--<p>
+							Total Price:¥ <em class="price">1.0</em>
+						</p>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<!--Expired MEu Modal-->
+<div class="modal fade" id="ExpiredMeu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Renew MEU</h4>
+			</div>
+			<div class="modal-body meu_modal-body">
+				<div class="renew_body">
+					<table id="renewTable"></table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary renewSure disabled">OK</button>				
+				<button class="btn btn-primary renewCancl">Cancel</button>				
+			</div>
+		</div>
+	</div>
+</div>	
+
+<div class="modal fade" id="meuXml" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 750px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">The MEU XML File</h4>
+			</div>
+			<div class="modal-body">
+				<textarea class="xmlContent">
+				</textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<!--meu Purchased Detail-->
+<div class="modal fade" id="RenewDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">License Detail</h4>
+			</div>
+			<div class="modal-body meu_modal-body">
+				<div class="renew_body">
+					<table id="RenewDetailTable"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+<script type="text/javascript" src="../../Cloud/js/meuMarket.js"></script>

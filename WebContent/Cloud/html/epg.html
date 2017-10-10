@@ -1,0 +1,351 @@
+<link rel="stylesheet" type="text/css" href="../../lib/jquery-ui/css/jquery-ui.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../Cloud/css/epg.css"/>
+
+<div class="ng-cloud-epg">
+	<div class="panel-body">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li class="cloudMeu" style="cursor: pointer;"><a href="javascript:;">Cloud</a></li>
+			<li class="active">EPG</li>
+		</ol>
+		<div id="epgTable">
+			<div id="toolbar" class="btn-group">
+				<button id="btn_create" type="button" class="btn btn-default" data-toggle="modal" data-target="#createEpg">
+					Create
+				</button>
+				<button id="btn_edit" type="button" class="btn btn-default disabled">
+					Edit
+				</button>
+				<button id="btn_delete" type="button" class="btn btn-default disabled" >
+					Remove
+				</button>
+				<div class="epgSearch">
+					<span class="glyphicon glyphicon-search"></span>
+					<input type="text" placeholder="search"/>
+				</div>
+			</div>
+			<table id="tb_table" class="epgTable"></table>
+		</div>
+		<!--epg 流程图 标签页-->
+		<div id="epgFlowchart" class="hidden" style="position: relative;">
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#epg" aria-controls="epg" role="tab" data-toggle="tab" id="epgtab">EPG</a></li>
+			    <li role="presentation"><a href="#urlMapping" aria-controls="urlMapping" role="tab" data-toggle="tab" id="urltab">URL Mapping</a></li>
+			    <li role="presentation"><a href="#xml" aria-controls="xml" role="tab" data-toggle="tab" id="epgXml">xml</a></li>
+		  	</ul>
+		
+		  <!-- Tab panes -->
+			<div class="tab-content meu_flowchart_box">
+			    <div role="tabpanel" class="tab-pane fade in active" id="epg">
+			    	<div class="epg_flowchart_item">
+			    		<div class="flowchart_left pull-left">
+			    			<!--<h4 class="handle">Palette</h4>-->
+			    			<div id="myPaletteDiv" class="palette"></div>
+			    		</div>
+			    		<div class="flowchart_right pull-right">
+			    			<div id="myDiagramDiv" class="diagram"></div>
+			    			<div class="draggable hidden" id="infoDraggable">
+			    				<h4  class="handle">LinkProperty Info</h4>
+			    				<div id="myInfo">
+			    					<table class="table-bordered table">
+										<tbody>
+											<tr>
+												<td>
+													mode
+												</td>
+												<td>
+													<select name="mode">
+														<option value="0"></option>
+														<option value="invoke">invoke</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													operationId
+												</td>
+												<td>
+													<select name="operationId">
+														<option value="0"></option>
+														<option value="1">operationId 1</option>
+														<option value="2">operationId 2</option>
+														<option value="3">operationId 3</option>
+														<option value="4">operationId 4</option>
+														<option value="5">operationId 5</option>
+														<option value="6">operationId 6</option>
+														<option value="7">operationId 7</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													condition
+												</td>
+												<td>
+													<input type="text" name="condition"/>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													return
+												</td>
+												<td>
+													<input type="text" name="return"/>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													inputParam
+												</td>
+												<td>
+													<div class="inputParam"></div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="linkBtn">
+										<button class="btn btn-primary lineSure">OK</button>
+										<button class="btn btn-default lineCancel">Cancel</button>
+									</div>
+			    				</div>
+			    			</div>
+			    			<div class="hidden" id="referenceInfo">
+			    				<p>
+			    					Whether or not to set the two is DI
+			    				</p>
+			    				<div class="btn_tool">
+			    					<button class="btn btn-primary referenceY">Yes</button>
+			    					<button class="btn btn-default referenceN">No</button>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	
+			    	</div>
+				</div>
+			    <div role="tabpanel" class="tab-pane fade " id="urlMapping">
+			    	<div class="epg_flowchart_item">
+			    		<div class="epg_flowchart_item_content">
+			    			<div id="btn-toolbar">
+			    				<button class="btn btn-default url_mapping_add">Add</button>
+			    				<!--<button class="btn btn-default url_mapping_edit">Edit</button>-->
+			    				<button class="btn btn-default url_mapping_remove">Remove</button>
+			    			</div>
+			    			<table id="url_mapping_table"></table>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div role="tabpanel" class="tab-pane fade " id="xml">
+			    	<div class="epg_flowchart_item">
+			    		<textarea id="xmlText" class="epg_flowchart_item_content"></textarea>
+			    	</div>
+			    </div>
+			</div>
+			
+			<div class="epg_flowchart_btn">
+				<button class="epgFlowchartSave btn-primary"><span class="glyphicon glyphicon-ok"></span></button>
+				<button class="epgFlowchartCancel btn-default"><span class="glyphicon glyphicon-remove"></span></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Create Epg-->
+<div class="modal fade" id="createEpg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Create EPG</h4>
+			</div>
+			<div class="modal-body">
+				<div class="user-input">
+					<label for="">EPG Name :</label>
+					<input type="text"  name="epgName" placeholder=""/>
+					<span class="text-danger">*</span>
+					<p class="text-danger name-info hidden">Please enter a valid EpgName</p>
+				</div>
+				<div class="user-input">
+					<label for="">Description :</label>
+					<textarea name="description"></textarea>
+					<!--<span class="text-danger">*</span>-->
+					<!--<p class="text-danger description-info hidden">Please enter a valid description</p>-->
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="saveEpg">Ok</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="cancelCreate">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Meu List-->
+<div id="meuList" class="hidden mask">
+	<div class="meu-table logContent">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Meu Lists</h3>
+				<button type="button" class="close" id="meuClose">&times;</button>
+			</div>
+			<div class="panel-body meuBody">
+				<table class="table table-bordered text-center">
+					<thead>
+						<tr>
+							<th width="110px"><label for="allselect">Select All</label><input type="checkbox" id="allselect" /></th>
+							<th>MEU Name</th>
+							<th>MEU Group</th>
+							<th>MEU Version</th>
+							<th>Available License</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<div class="panel-footer footer-right">
+				<button class="btn btn-primary" id="meuSure">OK</button>
+				<button class="btn btn-default" id="meuCancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--InputParameter-->
+<div id="inputParamList" class="mask hidden">
+	<div class="logContent">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Input Parameter List</h3>
+				<button type="button" class="close" id="inputParamClose">&times;</button>
+			</div>
+			<div class="panel-body">
+				<div class="inputParamContent">
+					<div class="input-item" style="position: relative;z-index: 100;">
+						<label for="">Variable</label>
+						<div class="paraminput">
+							<input type="text" name="variable" />
+							<span class="glyphicon glyphicon-chevron-down hidden paramMore"></span>
+							<ul class="paramlist">
+								<li>111</li>
+								<li>222</li>
+								<li>333</li>
+								<li>444</li>
+							</ul>
+						</div>
+					</div>
+					<div class="input-item">
+						<label for="">Type</label>
+						<div class="paraminput">
+							<input type="text"  name="type" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="input-item">
+						<label for="">InputParameterList</label>
+						<div class="paraminput paramTable">
+							<div class="valueTable">
+								<table class="table table-bordered text-center">
+									<tbody>
+										
+									</tbody>
+								</table>
+							</div>
+							<div class="paramBtn">
+								<button class="btn btn-default paramAdd">Add</button>
+								<button class="btn btn-default paramRemove">Remove</button>
+								<button class="btn btn-default paramUp">Up</button>
+								<button class="btn btn-default paramDown">Down</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="panel-footer footer-right">
+				<button class="btn btn-primary" id="inputParamSure">OK</button>
+				<button class="btn btn-default" id="inputParamCancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Url Mapping-->
+<div id="url_mapping" class="mask hidden">
+	<div class="meu-table logContent">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Url Mapping File</h3>
+				<button type="button" class="close" id="urlClose">&times;</button>
+			</div>
+			<div class="panel-body url_mapping_body">
+				<div class="url-mapping-item">
+					<label for="">Url</label>
+					<input type="text" name="url" />
+					<span class="text-danger">*</span>
+				</div>
+				<div class="url-mapping-item" style="position: relative;z-index: 200;">
+					<label for="">MEU</label>
+					<div class="select_box">
+						<input type="text" readonly="readonly" name="meuId"/>
+						<span class="glyphicon glyphicon-triangle-bottom select_down"></span>
+						<ul class="select_ul meuId" id="url_meuId">
+							
+						</ul>
+					</div>
+					<span class="text-danger">*</span>
+				</div>
+				<div class="url-mapping-item" style="position: relative;z-index: 120;">
+					<label for="">Operation</label>
+					<div class="select_box">
+						<input type="text" readonly="readonly" name="operationId"/>
+						<span class="glyphicon glyphicon-triangle-bottom select_down"></span>
+						<ul class="select_ul operationId">
+							
+						</ul>
+					</div>
+				</div>
+				<div class="url-mapping-item">
+					<label for="">Method</label>
+					<div class="select_box">
+						<input type="text" readonly="readonly" name="method"/>
+						<span class="glyphicon glyphicon-triangle-bottom select_down"></span>
+						<ul class="select_ul method">
+							<li>GET</li>
+							<li>POST</li>
+							<li>PUT</li>
+							<li>DELETE</li>
+						</ul>
+					</div>
+					<span class="text-danger">*</span>
+				</div>
+			</div>
+			<div class="panel-footer footer-right">
+				<button class="btn btn-primary disabled" id="urlMappingSure">OK</button>
+				<button class="btn btn-default" id="urlMappingCancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="loadingbg">
+	<div class="loading"></div>
+</div>
+
+<div class="modal fade" id="saveReminder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 750px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Toast</h4>
+			</div>
+			<div class="modal-body">
+				<p>Whether to save EPG before exiting!</p>
+			</div>
+			<div class="panel-footer footer-right text-center">
+				<button class="btn btn-primary  leaveEpgSave">OK</button>
+				<button class="btn btn-default  leaveEpgCancel">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../../lib/jquery-ui/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../lib/vkbeautify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../Cloud/js/epg.js"></script>

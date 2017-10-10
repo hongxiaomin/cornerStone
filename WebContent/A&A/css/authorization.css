@@ -1,0 +1,202 @@
+.auth_box{
+	margin-top: 100px;
+	margin-left: 150px;
+	padding: 10px;
+}
+.inputItem{
+	height: 80px;
+}
+.inputItem span{
+	margin-left: 5px;
+	color: #FF0000;
+}
+.inputItem label{
+	width: 120px;
+	text-align: right;
+	font-size: 18px;
+}
+.inputItem p{
+	margin-left: 130px;
+	margin-top:10px ;
+}
+.inputItem .input-box {
+	display: inline-block;
+	margin-left: 5px;
+	padding-left: 10px;
+	height: 35px;
+	width: 260px;
+	border: 1px solid #DCDCDC;
+	position:relative;
+	background: #fff;
+}
+.input-box input{
+	width: 100%;
+	height: 100%;
+	background: none;
+	outline: none;
+	border: none;
+}
+.input-box span{
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	color: #9D9D9D;
+}
+.input-box ul{
+	display: none;
+	position: absolute;
+	left: -1px;
+	top: 33px;
+	z-index: 100;
+	border: 1px solid #DCDCDC;
+	width: 260px;
+	background: #fff;
+}
+.input-box li{
+	cursor: pointer;
+	color: #666;
+	padding: 8px 0 8px 15px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "微软雅黑";
+}
+.input-box li:hover{
+	background: #61619D;
+	color: #fff;
+}
+.setBtn{
+	/*margin-left: 130px;
+	width: 200px;
+	height: 30px;*/
+	position: relative;
+	margin-top: 60px;
+}
+.setBtn label{
+	width: 120px;
+	text-align: right;
+	font-size: 18px;
+}
+.permission-box{
+	position: absolute;
+	left:130px;
+	top: 0;
+	background: #DCDCDC;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	min-width: 450px;
+	
+}
+.permission-box li{
+	cursor: pointer;
+}
+.permission-box-right{
+	position: absolute;
+	left:600px;
+	top: 0;
+	background: #DCDCDC;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	min-width: 300px;
+	min-height: 250px;
+}
+.listA{
+	padding-bottom: 20px;
+}
+.listA>li{
+	font-size: 16px;
+	width: 460px;
+}
+.listA ul{
+	display: none;
+}
+.checkbox{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #D0D0D0;
+	background: #eee;
+	border-radius: 3px;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+.checkbox span{
+	font-size: 10px;
+	margin-left: 2px;
+	opacity: 0;
+}
+.checkbox input{
+	position:absolute ;
+	margin-left: 0!important;
+	z-index: 10;
+	opacity: 0;
+}
+.permission-content li em{
+	display: inline-block;
+	list-style: none;
+	font-family: arial;
+}
+.permission-check input{
+	margin: 10px;
+	font-size: 18px;
+}
+.permission-check p{
+	font-size: 18px;
+}
+.listB{
+	margin-left: 20px;
+}
+.listB li{
+	font-size: 14px;
+}
+.listC{
+	margin-left: 40px;
+}
+.no-icon{
+	margin-left: 30px;
+}
+.btn-box{
+	padding: 10px 20px 30px;
+	float: right;
+}
+.btn-box button{
+	display: inline-block;
+	width: 80px;
+	margin-right: 20px;
+}
+
+#loadingbg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+}
+
+#loadingbg .loading {
+	width: 60px;
+	height: 60px;
+	border: 5px solid transparent;
+	border-left-color: #fff;
+	border-right-color: #fff;
+	border-top-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -30px 0 0 -30px;
+	animation: run 1s infinite;
+}
+@keyframes run {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+

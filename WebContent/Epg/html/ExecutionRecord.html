@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../../Epg/css/ExecutionRecord.css" />
+
+<div class="ng-EpgExexution">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li><a href="#" class="ToEpg">EPG</a></li>
+			<li class="active EXECUTION">Execution  Record</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading">Select Option</div>
+   			<div class="show-option">
+   				<label class="show-label">
+   					<label>hide-option</label>
+   					<span class="glyphicon glyphicon-chevron-up"></span>
+   				</label>
+   			</div>
+   			<div class="panel-body selecter">
+    			<form id="formSearch" class="form-horizontal">
+     				<div class="form-group">
+      					<label class="control-label col-sm-1" for="txt_search_epgid">EPG ID</label>
+      					<div class="col-sm-3">
+       						<input type="text" class="form-control id" id="txt_search_epgid">
+      					</div>
+      					<label class="control-label col-sm-1" for="txt_search_epgid">Status</label>
+      					<div class="col-sm-3">
+       						<input type="text" class="form-control status" id="txt_search_epgid">
+      					</div>
+      					<div class="col-sm-4" style="text-align:left;">
+       						<button type="button" style="margin-left:50px" id="btn_query" class="btn btn-primary search">Search</button>
+      					</div>
+     				</div>
+    			</form>
+   			</div>
+ 		</div>
+  		<table id="tb_table" class="executionTable"></table> 	
+ 	</div>
+</div>
+<div class="ng-EpgExeRecordDetail" style="display: none;">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li><a href="#" class="ToEpg">EPG</a></li>
+			<li class="active EXECUTION"><a href="javascript:void(0)">Execute  Record</a></li>
+			<li class="active">Execute  Record Detail</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading"></div>
+   		</div>
+ 	</div><!--panel-body end-->
+ 	<div class="EpgDetail flowMonite">
+ 		<div id="sample">
+		 	<div class="draw">  
+		       <div id="myDiagram" style="border: solid 1px gray; height: 720px">
+		       </div>  
+		  	</div>
+		</div>
+ 	</div>
+</div>
+<script type="text/javascript" src="../../Epg/js/flowchart.js" ></script>
+<script type="text/javascript" src="../../Epg/js/executeRecord.js"></script>

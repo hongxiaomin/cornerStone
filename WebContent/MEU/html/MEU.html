@@ -1,0 +1,70 @@
+<div class="ng-MEU">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li class="active">MEU</li>
+		</ol>
+  		<div class="panel panel-default">
+   			<div class="panel-heading">Select Option</div>
+   			<div class="show-option">
+   				<label class="show-label">
+   					<label>hide-option</label>
+   					<span class="glyphicon glyphicon-chevron-up"></span>
+   				</label>
+   			</div>
+   			<div class="panel-body container-fluid selecter">
+    			<form id="formSearch" class="form-horizontal">
+     				<div class="form-group">
+     					<div class="row">
+     						<label class="control-label col-sm-1" for="txt_search_meuid">MEU ID</label>
+		  					<div class="col-sm-1">
+		   						<input type="text" class="form-control id" id="txt_search_meuid">
+		  					</div>
+		  					<label class="control-label col-sm-1" for="txt_search_epgid">EPG ID</label>
+		  					<div class="col-sm-1">
+		   						<input type="text" class="form-control epgid" id="txt_search_epgid">
+		  					</div>
+		  					<label class="control-label col-sm-1" for="txt_search_meuname">Name</label>
+		  					<div class="col-sm-1">
+		   						<input type="text" class="form-control name" id="txt_search_meuname">
+		  					</div>
+		  					<label class="control-label col-sm-1" for="txt_search_meutype">Type</label>
+		  					<div class="col-sm-1">
+		   						<input type="text" class="form-control type" id="txt_search_meutype">
+		  					</div>
+      						<label class="control-label col-sm-1" for="txt_search_md5">MD5</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control md5" id="txt_search_md5">
+	      					</div>
+     					</div>
+      					<div class="row">
+	      					<label class="control-label col-sm-1" for="txt_search_version">Version</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control version" id="txt_search_version">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_author">Author</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control author" id="txt_search_author">
+	      					</div>
+	      					<label class="control-label col-sm-1" for="txt_search_signature">Signature</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control signature" id="txt_search_signature">
+	      					</div>
+      						<label class="control-label col-sm-1" for="txt_search_description">Description</label>
+	      					<div class="col-sm-1">
+	       						<input type="text" class="form-control description" id="txt_search_description">
+	      					</div>
+	      					<div class="col-sm-1" style="text-align: right; margin-left: 8.5%;">
+	       						<button type="button" id="btn_query" class="btn btn-primary search">Search</button>
+	      					</div>
+      					</div>
+      					<!--<div class="row">
+      					</div>-->
+     				</div>
+    			</form>
+   			</div>
+  		</div>
+  		<table id="tb_table"></table>
+ 	</div>
+</div>
+<script type="text/javascript" src="../../MEU/js/Meu.js"></script>

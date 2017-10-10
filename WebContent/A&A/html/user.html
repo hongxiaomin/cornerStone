@@ -1,0 +1,161 @@
+<link rel="stylesheet" type="text/css" href="../../A&A/css/user.css"/>
+<div class="ng-a">
+	<div class="panel-body" style="padding-bottom:0px;">
+		<ol class="breadcrumb">
+			<span class="glyphicon glyphicon-hand-right"></span>
+			<li>User</li>
+		</ol>
+	</div>
+	<div class="panel-body userTable" style="padding-bottom:0px;">
+		<div class="panel panel-default">
+			<div class="panel-heading">Select Option</div>
+			<div class="show-option">
+				<label for="" class="show-label">
+					<label for="">hide-option</label>
+					<span class="glyphicon glyphicon-chevron-up"></span>
+				</label>
+			</div>
+			<div class="panel-body selecter">
+				<form id="formSearch" class="form-horizontal">
+					<div class="form-group">
+						<div class="row">
+							<label class="control-label col-sm-1" for="txt_search_username">Name</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control " id="txt_search_username">
+							</div>
+							<label class="control-label col-sm-1" for="txt_search_role">Role</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control " id="txt_search_role">
+							</div>
+							<!--<label class="control-label col-sm-1" for="txt_search_isenable">isEnable</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control " id="txt_search_isenable">
+							</div>-->
+							<div class="col-sm-2" style="text-align: right;">
+								<button type="button" id="btn_query" class="btn btn-primary search" style="padding:0px 12px;">Search</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="toolbar" class="btn-group">
+   			<button id="btn_add" type="button" class="btn btn-default create" data-toggle="modal" data-target="#creatUser">
+    			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>Create
+   			</button>
+   			<button id="btn_delete" type="button" class="btn btn-default">
+    			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Delete
+   			</button>
+   			<button id="btn_update" type="button" class="btn btn-default" data-toggle="modal" >
+    			<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Update
+   			</button>
+  		</div>
+  		<table id="tb_table"></table>
+  		
+  		<!--creat user modal-->
+  		<div class="modal fade" id="creatUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  			<div class="modal-dialog" role="document">
+  				<div class="modal-content">
+  					<div class="modal-header">
+  						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  						<h4 class="modal-title" id="myModalLabel">create new user</h4>
+  					</div>
+  					<div class="modal-body">
+  						<div class="user-input">
+  							<label for="">User Name :</label>
+  							<input type="text"  name="username" placeholder=""/>
+  							<span class="text-danger">*</span>
+  							<p class="text-danger name-info hide">Please enter a valid Username</p>
+  						</div>
+  						<div class="user-input">
+  							<label for="">Password :</label>
+  							<input type="password" name="userpassword"/>
+  							<span class="text-danger">*</span>
+  							<p class="text-danger password-info hide">Please enter a valid password</p>
+  						</div>
+  						<div class="user-input">
+  							<label for="">Password Duplicate :</label>
+  							<input type="password"  name="reviewpassword"/>
+  							<span class="text-danger">*</span>
+  							<p class="text-danger review-password hide">Two input password is not consistent</p>
+  						</div>
+  						<div class="user-input">
+							<label for="">Role :</label>
+							<div class="input-box">
+								<input type="text" readonly="readonly" name="userrole"/>
+								<span class="glyphicon glyphicon-triangle-bottom userIcon"></span>
+								<ul class="input-list role-list">
+									<li>superadmin</li>
+									<li>appadmin</li>
+									<li>appuser</li>
+								</ul>
+							</div>
+							<span>*</span>
+							<p class="text-danger roleInfo hide">Please select a role</p>
+						</div>
+  					</div>
+  					<div class="modal-footer">
+  						<button type="button" class="btn btn-default" data-dismiss="modal" id="cancelCreate">Close</button>
+  						<button type="button" class="btn btn-primary" id="saveUser">Save</button>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+	
+  		<!--update user modal-->
+		<div class="modal fade" id="updateUser" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel">
+  			<div class="modal-dialog" role="document">
+  				<div class="modal-content">
+  					<div class="modal-header">
+  						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  						<h4 class="modal-title" id="updateModalLabel">Update user</h4>
+  					</div>
+  					<div class="modal-body">
+  						<div class="user-input">
+  							<label for="">User Name :</label>
+  							<input type="text"  name="username" readonly="readonly"/>
+  						</div>
+  						<div class="user-input">
+  							<label for="">Old Password :</label>
+  							<input type="password" name="oldpassword"/>
+  							<span class="text-danger">*</span>
+  							<p class="text-danger oldpassword hide">Please enter a valid password</p>
+  						</div>
+  						<div class="user-input">
+  							<label for="">New Password :</label>
+  							<input type="password" name="userpassword"/>
+  							<span class="text-danger">*</span>
+  							<p class="text-danger password-info hide">Please enter a valid password</p>
+  						</div>
+  						<div class="user-input">
+  							<label for="">Password Duplicate :</label>
+  							<input type="password"  name="reviewpassword"/>
+  							<span class="text-danger">*</span>
+  							<p class="text-danger review-password hide">Two input password is not consistent</p>
+  						</div>
+  						<div class="user-input">
+							<label for="">Role :</label>
+							<div class="input-box">
+								<input type="text" readonly="readonly" name="userrole"/>
+								<span class="glyphicon glyphicon-triangle-bottom userIcon"></span>
+								<ul class="input-list role-list">
+									<li>superadmin</li>
+									<li>appadmin</li>
+									<li>appuser</li>
+								</ul>
+							</div>
+							<span>*</span>
+							<p class="text-danger roleInfo hide">Please select a role</p>
+						</div>
+  					</div>
+  					<div class="modal-footer">
+  						<button type="button" class="btn btn-default" data-dismiss="modal" id="cancelUpdate">Close</button>
+  						<button type="button" class="btn btn-primary" id="saveUpdateUser">Save</button>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+	
+	</div>
+</div>
+<script src="../../A&A/js/user.js" type="text/javascript" charset="utf-8"></script>

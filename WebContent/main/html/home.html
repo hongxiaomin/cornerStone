@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../lib/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../common/css/common.css" />
+		<link rel="stylesheet" href="../../lib/bootstrap-table/bootstrap-table.min.css" />
+		<link rel="stylesheet" href="../../lib/alert/sweetalert.css" />
+		<link rel="stylesheet" href="../../lib/zTree/css/zTreeStyle/zTreeStyle.css" />
+		<title>Welcome to Cornerstone</title>
+	</head>
+	<body>
+		<div class="header">
+			<h3 style="margin: 0 !important;"><img src="../../common/img/logo.png"></h3>
+			<div class="help-block">
+				<span class="glyphicon glyphicon-question-sign"></span>
+			</div>
+			<div class="currentUser">
+				<ul>
+					<li class="currentUserInfo">
+						<a href="javascript:;">
+							<span class="glyphicon glyphicon-user"></span>
+							<span class="dropdown-toggle" data-toggle="dropdown"></span>
+							<span class="user" id="user"></span>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu userInfo" role="menu">
+							<li id="loginout"><a href="javascript:;"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+						</ul>
+					</li>
+				</ul>	
+			</div>
+		</div><!--header end-->
+		<div class="contentWrap">
+			<div class="leftPanel">
+				<ul class="nav nav-pills nav-stacked nav-bracket" id="navParent">
+					<li class="nav-parent second-nav CloudMeu CloudEpg CloudApp"><a href="javascript:;" style="position: relative;"><span class="glyphicon glyphicon-cloud"></span>Cloud<span class="pull-right glyphicon glyphicon-plus" style="font-size: 10px;"></span></a></li>
+					<ul class="children">
+						<li  class="CloudMeu"><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>MEU</a></li>
+						<li  class="CloudEpg" ><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>EPG</a></li>
+						<li  class="CloudApp" ><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>App</a></li>
+					</ul>
+					<li class="nav-parent homeActive menuContainer"><a href="javascript:;" ><span class="glyphicon glyphicon-th-large"></span>Container</a></li>
+					<li class="nav-parent menuMEU"><a href="javascript:;"><span class="glyphicon glyphicon-th"></span>MEU</a></li>
+					<li class="nav-parent second-nav menuEPG menuER"><a href="javascript:;"  style="position: relative;"><span class="glyphicon glyphicon-cog"></span>EPG<span class="pull-right glyphicon glyphicon-plus" style="font-size: 10px;"></span></a></li>
+					<ul class="children">
+						<li class="EpgLists menuEPG"><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>Lists</a></li>
+						<li class="EpgRecord menuER" ><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>Execution Record</a></li>
+					</ul>
+					<li class="nav-parent menuEvent"><a href="javascript:;"><span class="glyphicon glyphicon-flash"></span>Event</a></li>
+					<li class="nav-parent second-nav menuNodes"><a href="javascript:;"><span class="glyphicon glyphicon-tasks"></span>Environment<span class="pull-right glyphicon glyphicon-plus" style="font-size: 10px;"></span></a></li>
+					<ul class="children">
+						<li class="menuNodes"><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>Nodes</a></li>
+					</ul>
+					<li class="nav-parent second-nav menulist menuDeploy"><a href="javascript:;" ><span class="glyphicon glyphicon-gift"></span>Apps<span class="pull-right glyphicon glyphicon-plus" style="font-size: 10px;"></span></a></li>
+					<ul class="children">
+						<li  class="list menulist"><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>Lists</a></li>
+						<li  class="deploy menuDeploy"><a href="javascript:;"><span class="glyphicon glyphicon-play" style="font-size: 10px;"></span>Deploy</a></li>
+					</ul>
+					<li class="nav-parent menuUser"><a href="javascript:;" ><span class="glyphicon glyphicon-user"></span>User</a></li>
+					<li class="nav-parent menuPermisssion"><a href="javascript:;"><span class="glyphicon glyphicon-cog"></span>Permission</a></li>
+				</ul>
+			</div>
+			<div class="rightPanel" id="rightPanel">	
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../../lib/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="../../lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../lib/alert/sweetalert-dev.js"></script>
+<script type="text/javascript" src="../../lib/zTree/js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="../../lib/go.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript" src="../../common/resource/Tablepackage.js"></script>
+<script type="text/javascript" src="../../common/resource/ajax.js"></script>
+<script type="text/javascript" src="../js/home.js"></script>
+<script type="text/javascript" src="../../Container/js/Container.js"></script>
